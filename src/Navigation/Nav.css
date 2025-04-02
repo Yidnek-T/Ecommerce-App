@@ -1,0 +1,80 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f3f3f3;
+  padding: 20px;
+  z-index: 999;
+  width: auto;
+  position: relative;
+}
+
+.nav-container {
+  flex: 1;
+  margin-left: 300px;
+}
+
+/* Search Bar */
+.search-input {
+  padding: 12px 20px;
+  border: none;
+  background: #f7f6f6;
+  outline: none;
+  border-radius: 5px;
+  width: 14rem;
+}
+
+/* Navigation Icons */
+.nav-icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Icons */
+.nav-icons:hover {
+  transform: scale(1.2); /* Slight zoom effect */
+  color: #007bff;
+}
+
+/* Profile Container (Desktop) */
+.profile-container {
+  display: flex;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .profile-container.active {
+    display: flex;
+  }
+
+  .profile-container a {
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
